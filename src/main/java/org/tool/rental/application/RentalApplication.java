@@ -1,6 +1,5 @@
 package org.tool.rental.application;
 
-import org.apache.commons.lang3.StringUtils;
 import org.tool.rental.application.dtos.RentalAgreementDTO;
 import org.tool.rental.application.entity.RentalAgreement;
 import org.tool.rental.application.entity.Tool;
@@ -15,7 +14,7 @@ import java.util.Map;
 import static org.tool.rental.application.util.RentalUtil.convertToDto;
 import static org.tool.rental.application.util.RentalUtil.validateCheckoutRequest;
 
-public class Main {
+public class RentalApplication {
 
     private static final Map<String, Tool> tools = new HashMap<>();
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");

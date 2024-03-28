@@ -19,13 +19,13 @@ The Tool Rental Application allows users to check out tools for a specified numb
 1. Clone the repository:
 
 ```bash
-https://github.com/abhishekgandhi3/Tool-Rental-Application.git
+git clone https://github.com/abhishekgandhi3/Tool-Rental-Application.git
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-cd tool-rental-application
+cd Tool-Rental-Application
 ```
 
 3. Build the project using Maven:
@@ -38,7 +38,7 @@ mvn clean install
 Run the Main class to start the application:
 
 ```bash
-java -cp target/tool-rental-application.jar org.tool.rental.application.Main
+java -cp target/tool-rental-application.jar org.tool.rental.application.RentalApplication
 ```
 
 ### Features

@@ -7,13 +7,13 @@ import org.tool.rental.application.enums.ToolType;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
 
-public class MainTest {
+public class RentalApplicationTest {
 
     @Test
     public void testCheckoutTool1() {
         // Act & assert throws
         assertThrows(IllegalArgumentException.class,
-                () -> Main.checkoutTool("JAKR", 5, "09/03/2015", 101));
+                () -> RentalApplication.checkoutTool("JAKR", 5, "09/03/2015", 101));
 
 
     }
@@ -21,7 +21,7 @@ public class MainTest {
     @Test
     public void testCheckoutTool2() {
         // Act
-        RentalAgreementDTO rentalAgreementDTO = Main.checkoutTool("LADW", 3, "07/02/2020", 10);
+        RentalAgreementDTO rentalAgreementDTO = RentalApplication.checkoutTool("LADW", 3, "07/02/2020", 10);
 
         // Assert
         assertEquals("LADW", rentalAgreementDTO.getToolCode());
@@ -42,7 +42,7 @@ public class MainTest {
     @Test
     public void testCheckoutTool3() {
         // Act
-        RentalAgreementDTO rentalAgreementDTO = Main.checkoutTool("CHNS", 5, "07/02/2015", 25);
+        RentalAgreementDTO rentalAgreementDTO = RentalApplication.checkoutTool("CHNS", 5, "07/02/2015", 25);
 
         // Assert
         assertEquals("CHNS", rentalAgreementDTO.getToolCode());
@@ -62,7 +62,7 @@ public class MainTest {
     @Test
     public void testCheckoutTool4() {
         // Act
-        RentalAgreementDTO rentalAgreementDTO = Main.checkoutTool("JAKD", 6, "09/03/2015", 0);
+        RentalAgreementDTO rentalAgreementDTO = RentalApplication.checkoutTool("JAKD", 6, "09/03/2015", 0);
 
         // Assert
         assertEquals("JAKD", rentalAgreementDTO.getToolCode());
@@ -82,7 +82,7 @@ public class MainTest {
     @Test
     public void testCheckoutTool5() {
         // Act
-        RentalAgreementDTO rentalAgreementDTO = Main.checkoutTool("JAKR", 9, "07/02/2015", 0);
+        RentalAgreementDTO rentalAgreementDTO = RentalApplication.checkoutTool("JAKR", 9, "07/02/2015", 0);
 
         // Assert
         assertEquals("JAKR", rentalAgreementDTO.getToolCode());
@@ -102,7 +102,7 @@ public class MainTest {
     @Test
     public void testCheckoutTool6() {
         // Act
-        RentalAgreementDTO rentalAgreementDTO = Main.checkoutTool("JAKR", 4, "07/02/2020", 50);
+        RentalAgreementDTO rentalAgreementDTO = RentalApplication.checkoutTool("JAKR", 4, "07/02/2020", 50);
 
         // Assert
         assertEquals("JAKR", rentalAgreementDTO.getToolCode());
