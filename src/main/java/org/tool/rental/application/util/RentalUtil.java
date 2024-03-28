@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 
 public class RentalUtil {
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
 
     /**
      *
@@ -109,7 +109,7 @@ public class RentalUtil {
         if (discountPercentage < 0 || discountPercentage > 100) {
             throw new IllegalArgumentException("Discount percent must be between 0 and 100.");
         }
-        if (StringUtils.isBlank(toolcode)) {
+        if (toolcode == null || toolcode.trim().isEmpty()) {
             throw new IllegalArgumentException("Tool code must be provided");
         }
     }

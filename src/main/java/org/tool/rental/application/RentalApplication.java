@@ -17,7 +17,7 @@ import static org.tool.rental.application.util.RentalUtil.validateCheckoutReques
 public class RentalApplication {
 
     private static final Map<String, Tool> tools = new HashMap<>();
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
 
 
     static {
@@ -25,7 +25,7 @@ public class RentalApplication {
     }
 
     public static void main(String[] args) {
-        RentalAgreementDTO rentalAgreementDTO = checkoutTool("LADW", 30, "07/02/2020",10);
+        RentalAgreementDTO rentalAgreementDTO = checkoutTool("LADW", 7, "02/21/24",12);
         System.out.println(rentalAgreementDTO);
     }
 
